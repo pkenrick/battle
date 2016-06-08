@@ -13,8 +13,6 @@ class Player
     @hit_points -= damage
   end
 
-  def attack(player)
-    player.suffer_attack
-  end
+  
 
 end
