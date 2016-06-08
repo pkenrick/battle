@@ -1,7 +1,15 @@
 class Game
 
-  def attack(player1, player2)
-    player2.suffer_attack
+  attr_reader :player_1, :player_2
+
+  def initialize(player_1, player_2)
+    @player_1 = player_1
+    @player_2 = player_2
   end
+
+  def attack
+    player_2.suffer_attack
+  end
+
 
 end
