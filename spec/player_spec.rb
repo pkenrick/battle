@@ -11,10 +11,10 @@ describe Player do
 		end
 	end
 
-	describe "#attack" do
-		it "reduces HP by 10" do
-			player.attack(player2)
-			expect(player2.hit_points).to eq 70
-		end
-	end
+	# describe "#attack" do
+	# 	it "reduces HP by 10" do
+	# 		player.attack(player2)
+	# 		expect(player2.hit_points).to eq 70
+	# 	end
+	# end
 end

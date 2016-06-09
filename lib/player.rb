@@ -2,13 +2,11 @@ class Player
 
 	attr_reader :player_name, :hit_points
 
-	def initialize(player_name)
-		@player_name = player_name
-		@hit_points = 80
-	end
+	DEFAULT_HP = 80
 
-	def attack(player)
-		player.point_changer
+	def initialize(player_name, hit_points = DEFAULT_HP)
+		@player_name = player_name
+		@hit_points = hit_points
 	end
 
 	def point_changer
