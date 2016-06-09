@@ -1,5 +1,5 @@
 <p><%= @game.player.player_name %> vs. <%= @game.player2.player_name %></p>
-
+<p><%= @game.current_turn.player_name %>'s turn.</p>
 <p><%= @game.player2.player_name %>: <%= @game.player2.hit_points %>HP</p>
 
 <p><form action="/attack">
