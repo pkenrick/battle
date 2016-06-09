@@ -1,11 +1,13 @@
 <%= @game.player_1.player_name + " vs. " + @game.player_2.player_name %>
-</br>
+</br></br>
 <%= @game.player_2.player_name + ": " + @game.player_2.hit_points.to_s + "HP" %>
-</br>
+</br></br>
 
 <form action = '/attack' method = 'get'>
   <input type = 'submit' value = 'Attack'>
 </form>
+
+</br>
 
 <form action = '/switched_turn' method = 'get'>
   <input type = 'submit' value = 'End turn'>
