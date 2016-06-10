@@ -26,6 +26,14 @@ attr_reader :current_turn, :opposing_player, :game_over
 		@opposing_player = opponent_of(current_turn)
 	end
 
+	def self.create(player, player2)
+		@game = Game.new(player, player2)
+	end
+
+	def self.instance
+		@game
+	end
+
 	private
 
 	def opponent_of(the_player)
