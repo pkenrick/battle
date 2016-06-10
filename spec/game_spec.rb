@@ -30,5 +30,16 @@ describe Game do
 				expect(game.current_turn).to eq player2
 			end
 		end
+
+		describe "#opposing_player" do
+			it "starts with player2" do
+				expect(game.opposing_player).to eq player2
+			end
+			it "changes the opposing player after every turn" do
+				game.switch_turns
+				expect(game.opposing_player).to eq player
+			end
+		end
+
 	end
 end
