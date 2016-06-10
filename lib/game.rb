@@ -1,10 +1,11 @@
 class Game
-attr_reader :current_turn, :opposing_player
+attr_reader :current_turn, :opposing_player, :game_over
 
 	def initialize(player, player2)
 		@players = [player, player2]
 		@current_turn = player
 		@opposing_player = player2
+		@game_over = false
 	end
 
 	def player
@@ -17,6 +18,7 @@ attr_reader :current_turn, :opposing_player
 
 	def attack(player)
 		player.point_changer
+		check_game_status
 	end
 
 	def switch_turns
@@ -28,6 +30,10 @@ attr_reader :current_turn, :opposing_player
 
 	def opponent_of(the_player)
 		@players.select{|player| player != the_player }.first
+	end
+
+	def check_game_status
+		@game_over = player.hit_points <= 0 || player2.hit_points <=0 ? true : false
 	end
 
 end

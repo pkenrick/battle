@@ -19,7 +19,9 @@ class Battle < Sinatra::Base
 
   get '/play' do
     @game = $game
-    erb :play
+    @current_turn = @game.current_turn
+    @opposing_player = @game.opposing_player
+    @game.game_over ? erb(:game_over) : erb(:play)
   end
 
   get '/attack' do
